@@ -3,7 +3,6 @@
  import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
  import { RiArrowUpSFill } from "react-icons/ri";
 
- import { Card } from 'reactstrap';
 import {
  
   barChartDataDailyTraffic,

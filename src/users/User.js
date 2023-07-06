@@ -1,38 +1,82 @@
-import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-
-import { Box, Container, Grid } from "@chakra-ui/react";
 import {
+  Box,
   Button,
-  FormControl,
-  FormLabel,
+  Container,
   Input,
-  FormErrorMessage,
-  FormHelperText,
-} from "@chakra-ui/react";
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tr,
+} from '@chakra-ui/react';
+import { FormControl } from '@chakra-ui/react';
+import { AiOutlinePlus, AiOutlineSearch } from 'react-icons/ai';
+import Row from './Row';
+import DrawerExample from './DrawerExemple';
 
-const User = () => {
+function User() {
+  
   return (
-    <Container maxW={"full"} p="4" fontSize={"40px"}>
-      Users
-      <Box rounded="lg" boxShadow="base" p="4" backgroundColor={"white"}>
-        <Grid templateColumns="1fr max-content" gap={2} alignItems="center" display={'flex'}>
-          <FormControl p={""}>
-            <Input type="email" />
-          </FormControl>
-          <Button
-            leftIcon={<AiOutlineSearch />}
-            colorScheme="teal"
-            variant="outline"
-            maxW={"300px"}
-            minW="150px"
-          >
-            Call us
-          </Button>
-        </Grid>
-      </Box>
-    </Container>
-  );
-};
-
-export default User;
+    <div className="xd">
+      <Container maxW={'full'} p="4" fontSize={'18px'}>
+        <Box rounded="lg" boxShadow="base" p="4">
+          <Box mt="2" gap={'2'} mb="4" display={'flex'}>
+            <FormControl>
+              <Input type="text"  />
+            </FormControl>
+            <Button
+              leftIcon={<AiOutlineSearch />}
+              colorScheme="teal"
+              variant="outline"
+              maxW="300px"
+              minW="150px"
+              
+            >
+              Search
+            </Button>
+          </Box>
+        </Box>
+        <Box mt="5" rounded={'lg'} boxShadow="base">
+          <Box p="4" display={'flex'} justifyContent="space-between">
+            <Text fontSize="xl" fontWeight="bold">
+              List Users
+            </Text>
+            <Button
+              colorScheme="teal"
+              variant="outline"
+              maxW={'300px'}
+              minW="150px"
+              leftIcon={<AiOutlinePlus fontSize={'20px'} />}
+              
+            >
+              Add User
+            </Button>
+          </Box>
+          <TableContainer background={"#F7FAFC"}>
+            <Table variant="simple">
+              <Thead>
+                <Tr>
+                  <Th>Avatar</Th>
+                  <Th>Fullname</Th>
+                  <Th>Email</Th>
+                  <Th>Age</Th>
+                  <Th>Country</Th>
+                  <Th>Actions</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+               <Row />
+                
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </Box>
+        <DrawerExample />
+      </Container>
+    </div> 
+     );
+    }
+  export default User

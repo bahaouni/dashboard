@@ -1,6 +1,5 @@
 import React from 'react'
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
-import { FaArrowUp } from 'react-icons/fa';
+import { Card, CardBody, CardTitle, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +12,7 @@ const Head = () => {
   return (
     <Row style={{ display:"flex" , margin:"20px"}}>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0 " style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
+                <Card className="card-stats mb-4 mb-xl-0 " style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -36,7 +35,8 @@ const Head = () => {
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-success mr-2">
-                        <FaArrowUp /> 3.48%
+                      <FontAwesomeIcon icon={faArrowUp} />
+ 3.15%
                       </span>{" "}
                       <span className="text-nowrap">Since last month</span>
                     </p>
@@ -44,7 +44,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -74,7 +74,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -104,7 +104,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">

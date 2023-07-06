@@ -1,12 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SidebarWithHeader from './components/SideBarWithHeader';
 import Chartt from './components/Chartt';
-import ColumnChart from './components/Test';
 import Head from './components/Head';
 import User from './users/User';
-import SearchBar from './components/Nav'
 import 'bootstrap/dist/css/bootstrap.css';
-import Navbar from './navbar/Navbar';
+import AdminNavbar from './navbar/Navbar';
 import {
   Box
 } from "@chakra-ui/react";
@@ -25,7 +23,9 @@ function App() {
   path="/dashboard"
   element={
     <SidebarWithHeader>
-            <h2 style={{padding:"17px"}}> Dashboard</h2>
+              <AdminNavbar  />
+
+            <h2 style={{padding:"17px", color:" #00516D"}}> Dashboard</h2>
 
       <Head />
 
@@ -81,10 +81,10 @@ function App() {
   }
 />
 
-        <Route path="/Users" element={<SidebarWithHeader><User /><Card><SearchBar /></Card></SidebarWithHeader>} />
-        <Route path="/Profile" element={<SidebarWithHeader><Box ><h1>Profile</h1></Box><Profile /></SidebarWithHeader>} />
+        <Route path="/Users" element={<SidebarWithHeader>  <AdminNavbar  /> <User /></SidebarWithHeader>} />
+        <Route path="/Profile" element={<SidebarWithHeader><AdminNavbar  /><Box ><h1>Profile</h1></Box><Profile /></SidebarWithHeader>} />
         <Route path="/Posts" element={<SidebarWithHeader><Chartt  /></SidebarWithHeader>} />
-        <Route path="/Test" element={<SidebarWithHeader><Navbar/></SidebarWithHeader>} />
+        <Route path="/Test" element={<SidebarWithHeader><AdminNavbar /><TeamMembers /></SidebarWithHeader>} />
 
       </Routes>
     </Router>

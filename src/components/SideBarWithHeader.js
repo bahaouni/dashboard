@@ -1,14 +1,11 @@
 import React, { ReactNode } from 'react';
-import img from 'file:///C:/Users/keasar/Desktop/1670531020987.jpg'
 import { Link as Linkee } from 'react-router-dom';
 import {
   IconButton,
-  Avatar,
   Box,
   CloseButton,
   Flex,
-  HStack,
-  VStack,
+ 
   Icon,
   useColorModeValue,
   Link,
@@ -18,21 +15,16 @@ import {
   useDisclosure,
   BoxProps,
   FlexProps,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
+ 
 } from '@chakra-ui/react';
 import {
   FiHome,
   FiGrid,
-  FiCompass,
-  FiStar,
+ 
+
   FiLogIn,
   FiMenu,
-  FiBell,
-  FiChevronDown,
+
   FiUser,
   FiBarChart
   
@@ -92,25 +84,29 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      transition="3s ease"
-      bg={useColorModeValue('#219EBC', 'gray.900')}
-      borderRight="1px"
-      borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', md: 60 }}
-      pos="fixed"
-      h="full"
-      {...rest}>
+    transition="3s ease"
+    bg={useColorModeValue('#219EBC', 'gray.900')}
+    borderRight="1px"
+    borderRightColor={useColorModeValue('gray.200', 'gray.700')}
+    borderBottom="none" // Remove the border-bottom style
+    w={{ base: 'full', md: 60 }}
+    pos="fixed"
+    h="full"
+    {...rest}
+  >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color="#0A0A0B">
+        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color="#00516D">
         Loc’express
 
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
+        <Linkee to={`/${link.name}`} style={{color : "#fff"}}>
         <NavItem key={link.name} icon={link.icon} >
-<Linkee to={`/${link.name}`}>{link.name}</Linkee>
+{link.name}
         </NavItem>
+        </Linkee>
       ))}
     </Box>
   );
@@ -133,7 +129,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         cursor="pointer"
         _hover={{
           bg: '#219EBC',
-          color: 'white',
+          color: '#00516D',
         }}
         {...rest}>
         {icon && (
@@ -141,7 +137,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
             mr="4"
             fontSize="16"
             _groupHover={{
-              color: 'white',
+              color: '#00516D',
             }}
             as={icon}
           />
@@ -161,10 +157,10 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
-      height="20"
+      height="0"
+      padding={"20px"}
       alignItems="center"
       bg={useColorModeValue('white', 'gray.900')}
-      borderBottomWidth="1px"
       borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
       justifyContent={{ base: 'space-between', md: 'flex-end' }}
       {...rest}>
@@ -175,7 +171,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
-          <Text style={{ textAlign: "left" }}>Dashboard</Text>
+         
 
       <Text
         display={{ base: 'flex', md: 'none' }}
@@ -186,52 +182,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         Loc’express
       </Text>
 
-      <HStack spacing={{ base: '0', md: '6' }}>
-        <IconButton
-          size="lg"
-          variant="ghost"
-          aria-label="open menu"
-          icon={<FiBell />}
-        />
-        <Flex alignItems={'center'}>
-          <Menu>
-            <MenuButton
-              py={2}
-              transition="all 0.3s"
-              _focus={{ boxShadow: 'none' }}>
-              <HStack>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    img
-                  }
-                />
-                <VStack
-                  display={{ base: 'none', md: 'flex' }}
-                  alignItems="flex-start"
-                  spacing="1px"
-                  ml="2">
-                  <Text fontSize="sm">Baha  Ouni</Text>
-                  <Text fontSize="xs" color="gray.600">
-                    Admin
-                  </Text>
-                </VStack>
-                <Box display={{ base: 'none', md: 'flex' }}>
-                  <FiChevronDown />
-                </Box>
-              </HStack>
-            </MenuButton>
-            <MenuList
-              bg={useColorModeValue('white', 'gray.900')}
-              borderColor={useColorModeValue('gray.200', 'gray.700')}>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
-              <MenuDivider />
-              <MenuItem>Sign out</MenuItem>
-            </MenuList>
-          </Menu>
-        </Flex>
-      </HStack>
+     
     </Flex>
   );
 };

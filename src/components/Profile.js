@@ -56,24 +56,7 @@ import {
                  
                 </CardHeader>
                 <CardBody className="pt-0 pt-md-4">
-                  <Row>
-                    <div className="col">
-                      <div className="card-profile-stats d-flex justify-content-center mt-md-5">
-                        <div>
-                          <span className="heading">22</span>
-                          <span className="description">Friends</span>
-                        </div>
-                        <div>
-                          <span className="heading">10</span>
-                          <span className="description">Photos</span>
-                        </div>
-                        <div>
-                          <span className="heading">89</span>
-                          <span className="description">Comments</span>
-                        </div>
-                      </div>
-                    </div>
-                  </Row>
+                 
                   <div className="text-center">
                     <h3>
                       Jessica Jones
@@ -97,9 +80,7 @@ import {
                       Nick Murphy — writes, performs and records all of his own
                       music.
                     </p>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      Show more
-                    </a>
+                   
                   </div>
                 </CardBody>
               </Card>
@@ -125,7 +106,7 @@ import {
                     </Col>
                   </Row>
                 </CardHeader>
-                <CardBody style={{background:"#F7FAFC"}}>
+                <CardBody style={{background:"#F7FAFC" ,}}>
                   <Form style={{background:"#F7FAFC"}}>
                     <h6 className="heading-small text-muted mb-4">
                       User information
