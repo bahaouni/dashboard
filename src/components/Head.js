@@ -1,11 +1,19 @@
 import React from 'react'
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { FaArrowUp } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faPercent } from '@fortawesome/free-solid-svg-icons';
+import { faChartPie } from '@fortawesome/free-solid-svg-icons';
 
 const Head = () => {
   return (
-    <Row>
+    <Row style={{ display:"flex" , margin:"20px"}}>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card className="card-stats mb-4 mb-xl-0 " style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -21,13 +29,14 @@ const Head = () => {
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-                          <i className="fas fa-chart-bar" />
+                        <FontAwesomeIcon icon={faChartBar} />
+
                         </div>
                       </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-success mr-2">
-                        <i className="fa fa-arrow-up" /> 3.48%
+                        <FaArrowUp /> 3.48%
                       </span>{" "}
                       <span className="text-nowrap">Since last month</span>
                     </p>
@@ -35,7 +44,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -49,13 +58,15 @@ const Head = () => {
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-warning text-white rounded-circle shadow">
-                          <i className="fas fa-chart-pie" />
+                        <FontAwesomeIcon icon={faChartPie} />
+
                         </div>
                       </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-danger mr-2">
-                        <i className="fas fa-arrow-down" /> 3.48%
+                      <FontAwesomeIcon icon={faArrowDown} />
+ 3.48%
                       </span>{" "}
                       <span className="text-nowrap">Since last week</span>
                     </p>
@@ -63,7 +74,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -77,13 +88,15 @@ const Head = () => {
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                          <i className="fas fa-users" />
+                        <FontAwesomeIcon icon={faUsers} />
+
                         </div>
                       </Col>
                     </Row>
-                    <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-warning mr-2">
-                        <i className="fas fa-arrow-down" /> 1.10%
+                    <p className="mt-3 mb-0 text-muted text-sm" style={{ paddingBottom: "50px "}}>
+                      <span className="text-warning mr-2" >
+                      <FontAwesomeIcon icon={faArrowDown} />
+ 1.10%
                       </span>{" "}
                       <span className="text-nowrap">Since yesterday</span>
                     </p>
@@ -91,7 +104,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"153px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -105,13 +118,15 @@ const Head = () => {
                       </div>
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-info text-white rounded-circle shadow">
-                          <i className="fas fa-percent" />
+                        <FontAwesomeIcon icon={faPercent} />
+
                         </div>
                       </Col>
                     </Row>
                     <p className="mt-3 mb-0 text-muted text-sm">
                       <span className="text-success mr-2">
-                        <i className="fas fa-arrow-up" /> 12%
+                      <FontAwesomeIcon icon={faArrowUp} />
+ 12%
                       </span>{" "}
                       <span className="text-nowrap">Since last month</span>
                     </p>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
 
-class Users extends Component {
+class ColumnChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,4 +30,4 @@ class Users extends Component {
   }
 }
 
-export default Users;
+export default ColumnChart;

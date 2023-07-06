@@ -59,7 +59,7 @@ export default function SidebarWithHeader({
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue('#6677CC', 'gray.900')}>
+    <Box minH="100vh" bg={useColorModeValue('#white', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
@@ -93,7 +93,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       transition="3s ease"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue('#219EBC', 'gray.900')}
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
@@ -101,14 +101,14 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color="#2B3674">
+        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color="#0A0A0B">
         Loc’express
 
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} >
 <Linkee to={`/${link.name}`}>{link.name}</Linkee>
         </NavItem>
       ))}
@@ -132,7 +132,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: '#2B3674',
+          bg: '#219EBC',
           color: 'white',
         }}
         {...rest}>
@@ -157,6 +157,7 @@ interface MobileProps extends FlexProps {
 }
 const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
+    
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
@@ -174,6 +175,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
+          <Text style={{ textAlign: "left" }}>Dashboard</Text>
 
       <Text
         display={{ base: 'flex', md: 'none' }}
@@ -209,7 +211,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Baha eddine Ouni</Text>
+                  <Text fontSize="sm">Baha  Ouni</Text>
                   <Text fontSize="xs" color="gray.600">
                     Admin
                   </Text>
