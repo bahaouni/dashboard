@@ -12,11 +12,11 @@ import {
   } from '@chakra-ui/react';
   import InputsGroup from './InputsGroup';
   
-  export default function DrawerExample() {
+  export default function DrawerExample({ isOpen, onClose }) {
 
     return (
       <>
-        <Drawer >
+      <Drawer isOpen={isOpen} onClose={onClose}>
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton
@@ -46,14 +46,11 @@ import {
             </DrawerBody>
   
             <DrawerFooter>
-              <Button
-                variant="outline"
-              
-              >
+            <Button variant="outline" onClick={onClose}>
                 Cancel
               </Button>
               <Button
-                colorScheme="blue"
+                background={"#219EBC"}
                
               >
                 Save

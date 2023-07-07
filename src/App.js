@@ -11,6 +11,7 @@ import {
 import Profile from './components/Profile';
 import { Card } from 'reactstrap';
 import TeamMembers from './components/TeamMembers';
+import Annonces from './annonces/Annonces';
 function App() {
   return (
     <Router>
@@ -69,9 +70,15 @@ function App() {
               background: "#F7FAFC",
               marginLeft: "30px", // Add margin-left of 30px
               marginRight: "30px",
-              height:"100%" // Add margin-right of 30px
+              height:"60%" // Add margin-right of 30px
             }}
           >
+            <h3> Team members </h3>
+            <TeamMembers />
+            <TeamMembers />
+            <TeamMembers />
+            <TeamMembers />
+            <TeamMembers />
             <TeamMembers /> {/* Adjust the width as needed */}
           </Card>
         </div>
@@ -83,7 +90,7 @@ function App() {
 
         <Route path="/Users" element={<SidebarWithHeader>  <AdminNavbar  /> <User /></SidebarWithHeader>} />
         <Route path="/Profile" element={<SidebarWithHeader><AdminNavbar  /><Box ><h1>Profile</h1></Box><Profile /></SidebarWithHeader>} />
-        <Route path="/Posts" element={<SidebarWithHeader><Chartt  /></SidebarWithHeader>} />
+        <Route path="/Posts" element={<SidebarWithHeader><Annonces /></SidebarWithHeader>} />
         <Route path="/Test" element={<SidebarWithHeader><AdminNavbar /><TeamMembers /></SidebarWithHeader>} />
 
       </Routes>

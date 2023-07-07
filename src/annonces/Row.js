@@ -1,20 +1,9 @@
 import { Avatar, Box, Button, Td, Tr } from '@chakra-ui/react';
-import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
+import { AiFillDelete } from 'react-icons/ai';
+import {CheckIcon} from  '@chakra-ui/icons'
 
 import React from 'react'
-import DrawerExample   from './DrawerExemple';
-import { useState } from 'react';
 const Row = (props) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const handleAddUser = () => {
-    setIsDrawerOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setIsDrawerOpen(false);
-  };
-
   return (
     <Tr>
       <Td>
@@ -26,8 +15,8 @@ const Row = (props) => {
       <Td>{props.country}</Td>
       <Td>
         <Box display="flex" gap="1">
-          <Button colorScheme={'blue'} onClick={handleAddUser}>
-          <AiFillEdit />
+          <Button colorScheme={'green'} >
+          <CheckIcon />
          
           </Button>
           <Button colorScheme={'red'} >
@@ -35,7 +24,6 @@ const Row = (props) => {
           </Button>
         </Box>
       </Td>
-      <DrawerExample isOpen={isDrawerOpen} onClose={handleDrawerClose} />
 
     </Tr>
   )
