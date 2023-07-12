@@ -12,13 +12,15 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+
 import { FormControl } from '@chakra-ui/react';
 import { AiOutlinePlus, AiOutlineSearch } from 'react-icons/ai';
 import Row from './Row';
 import DrawerExample from './DrawerExemple';
 import { useState } from 'react';
-
 function User() {
+
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleAddUser = () => {
@@ -36,7 +38,7 @@ function User() {
         <Box rounded="lg"  p="4"  background={"#F7FAFC"} boxShadow= "0 2px 4px rgba(0, 0, 0, 0.1)">
           <Box mt="2" gap={'2'} mb="4" display={'flex'} background={"#fff"}>
             <FormControl>
-              <Input type="text"  placeholder='rechercher un utilisateur'/>
+              <Input type="text"  placeholder='search user'/>
             </FormControl>
             <Button
               leftIcon={<AiOutlineSearch />}
@@ -79,14 +81,23 @@ function User() {
                 </Tr>
               </Thead>
               <Tbody>
-               <Row name={"baha"} email={"morgen12@gmail.com"} age ={"21"}  country={"tunisia"}/>
+                {/* {users?.map(({id,fullname,email,age, country }) => {return <Row 
+                id={id}
+                email={email}
+                age={age}
+
+                fullname={fullname}
+                country={country}
+                
+                />})} */}
+                 <Row name={"baha"} email={"morgen12@gmail.com"} age ={"21"}  country={"tunisia"}/>
                <Row name={"willis"} email={"morgen12@gmail.com"} age ={"30"}  country={"canada"}/>
                <Row name={"milani"} email={"milani@gmail.com"} age ={"35"}  country={"france"}/>
                <Row name={"azer"} email={"mazer12@gmail.com"} age ={"71"}  country={"new york"}/>
                <Row name={"baha"} email={"morgen12@gmail.com"} age ={"21"}  country={"tunisia"}/>
                <Row name={"baha"} email={"morgen12@gmail.com"} age ={"21"}  country={"tunisia"}/>
                <Row name={"baha"} email={"morgen12@gmail.com"} age ={"21"}  country={"tunisia"}/>
-
+               
                 
               </Tbody>
             </Table>

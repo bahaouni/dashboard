@@ -13,7 +13,7 @@ import {
   const textColor = useColorModeValue("black", "white");
 
    return (
-<div style={{background:"#F7FAFC"}}>
+<div >
     <Flex justify='space-between' align='start' px='10px' pt='5px'>
     <Flex flexDirection='column' align='start' me='20px'>
       <Text color='secondaryGray.600' fontSize='sm' fontWeight='500'>
@@ -24,7 +24,7 @@ import {
           color={textColor}
           fontSize='34px'
           fontWeight='700'
-          lineHeight='100%'>
+          lineHeight='30%'>
           2.579
         </Text>
         <Text

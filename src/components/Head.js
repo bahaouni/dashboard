@@ -12,7 +12,7 @@ const Head = () => {
   return (
     <Row style={{ display:"flex" , margin:"20px"}}>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0 " style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
+                <Card className="card-stats mb-4 mb-xl-0 " style={{ backgroundColor: "#F7FAFC" ,boxShadow: ' 8px 8px 20px 4px rgba(112, 144, 176, 0.18)', height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -44,7 +44,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: ' 8px 8px 20px 4px rgba(112, 144, 176, 0.18)' , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -74,7 +74,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: ' 8px 8px 20px 4px rgba(112, 144, 176, 0.18)' , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">
@@ -104,7 +104,7 @@ const Head = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" , height:"123px" }}>
+                <Card className="card-stats mb-4 mb-xl-0" style={{ backgroundColor: "#F7FAFC" ,boxShadow: ' 8px 8px 20px 4px rgba(112, 144, 176, 0.18)' , height:"123px" }}>
                   <CardBody>
                     <Row>
                       <div className="col">

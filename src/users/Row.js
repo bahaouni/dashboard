@@ -1,6 +1,6 @@
 import { Avatar, Box, Button, Td, Tr } from '@chakra-ui/react';
 import { AiFillDelete, AiFillEdit } from 'react-icons/ai';
-
+ 
 import React from 'react'
 import DrawerExample   from './DrawerExemple';
 import { useState } from 'react';
@@ -30,7 +30,7 @@ const Row = (props) => {
           <AiFillEdit />
          
           </Button>
-          <Button colorScheme={'red'} >
+          <Button colorScheme={'red'}   >
             <AiFillDelete />
           </Button>
         </Box>

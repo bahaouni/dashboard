@@ -41,7 +41,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Users', icon:  FiBarChart},
   { name: 'Posts', icon: FiGrid },
   { name: 'Profile', icon: FiUser },
-  { name: 'Sign in', icon: FiLogIn },
+  { name: 'Signin', icon: FiLogIn },
 ];
 
 export default function SidebarWithHeader({
@@ -94,13 +94,14 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
     h="full"
     {...rest}
   >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between" >
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" color="#00516D">
         Loc’express
 
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
+      
       {LinkItems.map((link) => (
         <Linkee to={`/${link.name}`} style={{color : "#fff"}}>
         <NavItem key={link.name} icon={link.icon} >

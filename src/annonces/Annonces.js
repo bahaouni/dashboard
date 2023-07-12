@@ -13,7 +13,7 @@ import {
     Tr,
   } from '@chakra-ui/react';
   import { FormControl } from '@chakra-ui/react';
-  import { AiOutlinePlus, AiOutlineSearch } from 'react-icons/ai';
+  import { AiOutlineSearch } from 'react-icons/ai';
   import Row from './Row';
 
   
@@ -26,7 +26,7 @@ import {
           <Box rounded="lg"  p="4"  background={"#F7FAFC"} boxShadow= "0 2px 4px rgba(0, 0, 0, 0.1)">
             <Box mt="2" gap={'2'} mb="4" display={'flex'} background={"#fff"}>
               <FormControl>
-                <Input type="text"  placeholder='rechercher une annonce'/>
+                <Input type="text"  placeholder='search post'/>
               </FormControl>
               <Button
                 leftIcon={<AiOutlineSearch />}
@@ -43,7 +43,7 @@ import {
           <Box mt="5" rounded={'lg'}  boxShadow= "0 2px 4px rgba(0, 0, 0, 0.1)">
             <Box p="4" display={'flex'} justifyContent="space-between">
               <Text fontSize="xl" fontWeight="bold">
-                List Annonces
+                List Posts
               </Text>
              
             </Box>

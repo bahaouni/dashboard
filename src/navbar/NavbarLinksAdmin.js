@@ -1,4 +1,6 @@
 // Chakra Imports
+import { Link as Linke } from 'react-router-dom';
+
 import {
 	Avatar,
 	
@@ -61,15 +63,20 @@ export default function HeaderLinks(props) {
 
 			<Menu>
 				<MenuButton p="0px">
-					<Avatar
-						_hover={{ cursor: 'pointer' }}
-						color="white"
-						name="Adela Parkson"
-						bg="#11047A"
-						size="sm"
-						w="40px"
-						h="40px"
-					/>
+				<Avatar
+      _hover={{ cursor: 'pointer' }}
+      color="white"
+      bg="#11047A"
+      size="sm"
+      w="40px"
+      h="40px"
+    >
+      <img
+        alt="Profile"
+        className="rounded-circle"
+        src={require('../assets/team-4-800x800.jpg')}
+      />
+    </Avatar>
 				</MenuButton>
 				<MenuList boxShadow={shadow} p="0px" mt="10px" borderRadius="20px" bg={menuBg} border="none">
 					<Flex w="100%" mb="0px">
@@ -88,7 +95,7 @@ export default function HeaderLinks(props) {
 					</Flex>
 					<Flex flexDirection="column" p="10px">
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} borderRadius="8px" px="14px">
-							<Text fontSize="sm">Profile Settings</Text>
+							<Linke to='/profile' ><Text fontSize="sm">Profile Settings</Text></Linke>
 						</MenuItem>
 						
 						<MenuItem
@@ -97,7 +104,7 @@ export default function HeaderLinks(props) {
 							color="red.400"
 							borderRadius="8px"
 							px="14px">
-							<Text fontSize="sm">Log out</Text>
+							<Linke to='/Signin' ><Text fontSize="sm">Log Out </Text></Linke>
 						</MenuItem>
 					</Flex>
 				</MenuList>

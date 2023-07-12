@@ -14,6 +14,17 @@ import {
   
   export default function DrawerExample({ isOpen, onClose }) {
 
+    // const [form, setForm] = useState({});
+    // const onChangeHandler = (e) => {
+    //   setForm({
+    //     ...form,
+    //     [e.target.name]: e.target.value,
+    //   });
+    // };
+  
+    // const onAdd = () => {
+    //   Add(form, setForm);
+    // };
     return (
       <>
       <Drawer isOpen={isOpen} onClose={onClose}>
