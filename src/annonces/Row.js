@@ -41,7 +41,8 @@ const ImageCell = (props) => {
           <Box fontSize="sm" fontWeight="semibold">
             Image Name: {props.name}
           </Box>
-          <Box fontSize="sm">Image Description: waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{props.description}</Box>
+          <Box fontSize="sm">Image Description: Cette maison spacieuse et lumineuse .
+{props.description}</Box>
         </Box>
       )}
     </Td>

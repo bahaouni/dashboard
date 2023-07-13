@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Box,
@@ -27,6 +27,46 @@ function Reset() {
   const textColor = useColorModeValue("navy.700", "white");
   const textColorSecondary = "gray.400";
   const brandStars = useColorModeValue("brand.500", "brand.400");
+
+  // State for password input values and validation
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordError, setPasswordError] = useState(false);
+  const [confirmPasswordError, setConfirmPasswordError] = useState(false);
+
+  // Validate password input
+  const validatePassword = () => {
+    const isValid = password.length >= 8;
+    setPasswordError(!isValid);
+    return isValid;
+  };
+
+  // Validate confirm password input
+  const validateConfirmPassword = () => {
+    const isValid = confirmPassword === password;
+    setConfirmPasswordError(!isValid);
+    return isValid;
+  };
+
+  // Handle password input change
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+    setPasswordError(false);
+  };
+
+  // Handle confirm password input change
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+    setConfirmPasswordError(false);
+  };
+
+  // Handle form submission
+  const handleSubmit = () => {
+    if (validatePassword() && validateConfirmPassword()) {
+      // Submit form
+    }
+  };
+
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
@@ -63,7 +103,7 @@ function Reset() {
           
          
           <FormControl>
-          <FormLabel
+            <FormLabel
               ms='4px'
               fontSize='sm'
               fontWeight='500'
@@ -80,6 +120,9 @@ function Reset() {
                 size='lg'
                 type={show ? "text" : "password"}
                 variant='auth'
+                value={password}
+                onChange={handlePasswordChange}
+                isInvalid={passwordError}
               />
               
               
@@ -92,6 +135,11 @@ function Reset() {
                 />
               </InputRightElement>
             </InputGroup>
+            {passwordError && (
+              <Text fontSize="sm" color="red.500">
+                Password must be at least 8 characters long.
+              </Text>
+            )}
             <FormLabel
               ms='4px'
               fontSize='sm'
@@ -109,6 +157,9 @@ function Reset() {
                 size='lg'
                 type={show ? "text" : "password"}
                 variant='auth'
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+                isInvalid={confirmPasswordError}
               />
               
               
@@ -121,6 +172,11 @@ function Reset() {
                 />
               </InputRightElement>
             </InputGroup>
+            {confirmPasswordError && (
+              <Text fontSize="sm" color="red.500">
+                Passwords do not match.
+              </Text>
+            )}
           </FormControl>
           <Button
             color={"white"}
@@ -130,7 +186,8 @@ function Reset() {
               w='100%'
               h='50'
               mb='24px'
-              background={"#219EBC"}>
+              background={"#219EBC"}
+              onClick={handleSubmit}>
               Reset Password
             </Button>
         </Flex>
