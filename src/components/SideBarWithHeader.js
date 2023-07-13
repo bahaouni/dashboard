@@ -25,7 +25,7 @@ import {
   FiLogIn,
   FiMenu,
 
-  FiUser,
+  // FiUser,
   FiBarChart
   
 } from 'react-icons/fi';
@@ -40,7 +40,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Dashboard', icon: FiHome },
   { name: 'Users', icon:  FiBarChart},
   { name: 'Posts', icon: FiGrid },
-  { name: 'Profile', icon: FiUser },
+  // { name: 'Profile', icon: FiUser },
   { name: 'Signin', icon: FiLogIn },
 ];
 

@@ -40,7 +40,7 @@ function App() {
       <Routes>
        
         
-        <Route path="/" element={<SidebarWithHeader><Chartt /></SidebarWithHeader>} />
+        <Route path="/" element={<Signin />} />
         <Route
   path="/dashboard"
   element={

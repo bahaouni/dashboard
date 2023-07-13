@@ -31,7 +31,6 @@ function Signin() {
   const textColor = useColorModeValue("navy.700", "white");
   const textColorSecondary = "gray.400";
   const textColorDetails = useColorModeValue("navy.700", "secondaryGray.600");
-  const textColorBrand = useColorModeValue("brand.500", "white");
   const brandStars = useColorModeValue("brand.500", "brand.400");
   const googleBg = useColorModeValue("secondaryGray.300", "whiteAlpha.200");
   const googleText = useColorModeValue("navy.700", "white");
@@ -79,6 +78,7 @@ function Signin() {
           w={{ base: "100%", md: "420px" }}
           maxW='100%'
           background='transparent'
+          
           borderRadius='15px'
           mx={{ base: "auto", lg: "unset" }}
           me='auto'
@@ -119,6 +119,7 @@ function Signin() {
               Email<Text color={brandStars}>*</Text>
             </FormLabel>
             <Input
+            borderColor={"black"}
               isRequired={true}
               variant='auth'
               fontSize='sm'
@@ -129,6 +130,7 @@ function Signin() {
               fontWeight='500'
               size='lg'
             />
+            
             <FormLabel
               ms='4px'
               fontSize='sm'
@@ -181,7 +183,9 @@ function Signin() {
                   Forgot password?
                 </Text>
               </NavLink>
+
             </Flex>
+            <NavLink to='/dashboard'>
             <Button
               fontSize='sm'
               variant='brand'
@@ -192,6 +196,7 @@ function Signin() {
               background={"#219EBC"}>
               Sign In
             </Button>
+            </NavLink>
           </FormControl>
           <Flex
             flexDirection='column'
