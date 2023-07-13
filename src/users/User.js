@@ -11,6 +11,7 @@ import {
   Th,
   Thead,
   Tr,
+  
 } from '@chakra-ui/react';
 
 import { FormControl } from '@chakra-ui/react';
@@ -103,7 +104,9 @@ function User() {
             </Table>
           </TableContainer>
         </Box>
-        <DrawerExample isOpen={isDrawerOpen} onClose={handleDrawerClose} />
+       
+   
+  <DrawerExample isOpen={isDrawerOpen} onClose={handleDrawerClose} /> 
       </Container>
     </div> 
      );
